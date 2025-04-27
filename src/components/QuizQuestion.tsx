@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -12,8 +11,6 @@ export type QuestionType = {
   options?: string[];
   correctAnswer: string | string[];
   exampleAnswer?: string;
-  audioUrl?: string;
-  videoId?: string;
 };
 
 interface QuizQuestionProps {
@@ -73,7 +70,7 @@ const QuizQuestion = ({
         return (
           <div className="mt-4">
             <Textarea
-              placeholder="Ketik jawaban Anda di sini..."
+              placeholder="Ketik jawaban Anda berdasarkan teks soal..."
               value={localAnswer}
               onChange={handleEssayChange}
               className="min-h-[120px]"
@@ -82,20 +79,7 @@ const QuizQuestion = ({
         );
       case "listening":
         return (
-          <div className="mt-4 space-y-4">
-            <div className="aspect-video">
-              {question.videoId && (
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src={`https://www.youtube.com/embed/${question.videoId}`}
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              )}
-            </div>
+          <div className="mt-4">
             {question.options ? (
               <RadioGroup
                 value={localAnswer}
@@ -116,7 +100,7 @@ const QuizQuestion = ({
               </RadioGroup>
             ) : (
               <Textarea
-                placeholder="Ketik jawaban Anda di sini berdasarkan video..."
+                placeholder="Ketik jawaban Anda berdasarkan teks soal..."
                 value={localAnswer}
                 onChange={handleEssayChange}
                 className="min-h-[120px]"

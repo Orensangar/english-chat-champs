@@ -1,4 +1,3 @@
-
 import { QuestionType } from "@/components/QuizQuestion";
 
 // Junior Level Questions
@@ -97,49 +96,42 @@ const juniorQuestions: QuestionType[] = [
     exampleAnswer: "I'm sorry, I don't understand. Could you explain again?",
   },
 
-  // Listening questions (using YouTube embed)
+  // Converting video questions to text-based listening comprehension
   {
     id: 11,
     type: "listening",
-    question: "Listen to the conversation and answer: What is the woman's name?",
+    question: "Read the following conversation:\n\nJohn: Hi there!\nEmma: Hello! I'm Emma. Nice to meet you.\nJohn: Nice to meet you too!\n\nWhat is the woman's name?",
     options: ["Sarah", "Mary", "Emma", "Laura"],
     correctAnswer: "Emma",
-    videoId: "VJvp-9LuTW0", // Simple conversation YouTube video
   },
   {
     id: 12,
     type: "listening",
-    question: "Listen to the dialogue and answer: Where are they going?",
+    question: "Read the dialogue:\n\nPeter: Where should we go for dinner?\nMary: How about that new Italian restaurant downtown?\nPeter: Sounds great! Let's go.\n\nWhere are they going?",
     options: ["Restaurant", "Cinema", "Park", "Museum"],
     correctAnswer: "Restaurant",
-    videoId: "44OCLKXJyP0", // Another simple conversation
   },
   {
     id: 13,
     type: "listening",
-    question: "After listening, what time will they meet?",
+    question: "Read the conversation:\n\nTom: When shall we meet tomorrow?\nJane: Is 5:00 PM good for you?\nTom: Perfect, see you then!\n\nWhat time will they meet?",
     options: ["3:00 PM", "4:00 PM", "5:00 PM", "6:00 PM"],
     correctAnswer: "5:00 PM",
-    videoId: "Il5Sq7_XGQA", // Simple conversation with time
   },
   {
     id: 14,
     type: "listening",
-    question: "Listen to the audio and write down what the speaker's hobby is.",
+    question: "Read the text:\n\nHi, I'm Jack. I love staying active and healthy. Every morning, I go to the pool for my daily exercise. Swimming helps me stay fit and relaxed.\n\nWhat is Jack's hobby?",
     correctAnswer: ["swimming", "swim"],
     exampleAnswer: "His hobby is swimming.",
-    videoId: "EZmUDhYqFuk", // Simple introduction about hobbies
   },
   {
     id: 15,
     type: "listening",
-    question: "After listening, what does the man order at the coffee shop?",
+    question: "Read the conversation:\n\nCustomer: Good morning! I'd like a coffee please.\nBarista: What would you like to order?\nCustomer: I'll have a cappuccino.\nBarista: One cappuccino coming right up!\n\nWhat does the customer order?",
     options: ["Black coffee", "Cappuccino", "Latte", "Espresso"],
     correctAnswer: "Cappuccino",
-    videoId: "1-YKYNqWids", // Ordering coffee conversation
   },
-  
-  // Adding more questions to reach total of 15 (for demo purposes - full implementation would have 50)
 ];
 
 // Intermediate Level Questions
@@ -243,43 +235,39 @@ const intermediateQuestions: QuestionType[] = [
     exampleAnswer: "One of my most memorable experiences was when my family and I went camping in the mountains last summer. We hiked, fished in the lake, and sat around the campfire telling stories at night. It was special because we rarely get to spend quality time together due to our busy schedules. I'll always remember how peaceful and happy I felt during that trip.",
   },
 
-  // Listening questions
+  // Converting video questions to text-based listening comprehension
   {
     id: 111,
     type: "listening",
-    question: "After listening to the business conversation, what is the main issue the team is facing?",
+    question: "Read the business meeting transcript:\n\nManager: Our biggest challenge this quarter has been meeting deadlines.\nTeam Lead: Yes, we need better time management strategies.\nEmployee: I agree. We're often rushing at the last minute.\n\nWhat is the main issue the team is facing?",
     options: ["Budget constraints", "Time management", "Communication problems", "Technical difficulties"],
     correctAnswer: "Time management",
-    videoId: "fMS_ckO8Rko", // Business meeting video
   },
   {
     id: 112,
     type: "listening",
-    question: "Listen to the conversation and answer: What is the speaker's job?",
+    question: "Read the job interview excerpt:\n\nInterviewer: Could you tell us about your current role?\nCandidate: I'm currently leading the marketing team at Tech Corp, managing our digital campaigns and brand strategy.\n\nWhat is the speaker's job?",
     options: ["Teacher", "Doctor", "Engineer", "Marketing Manager"],
     correctAnswer: "Marketing Manager",
-    videoId: "zL-j5V-kcWk", // Job interview conversation
   },
   {
     id: 113,
     type: "listening",
-    question: "After listening to the podcast excerpt, what is the main topic being discussed?",
+    question: "Read the podcast transcript:\n\nHost: Today we're discussing how artificial intelligence and smartphones are changing the way we live and work.\nGuest: Yes, digital technology is revolutionizing every aspect of our lives.\n\nWhat is the main topic being discussed?",
     options: ["Climate change", "Digital technology", "Healthcare reform", "Educational systems"],
     correctAnswer: "Digital technology",
-    videoId: "Km8yMe3tgGQ", // Technology podcast
   },
   {
     id: 114,
     type: "listening",
-    question: "Listen to the audio and explain the speaker's opinion about remote work.",
+    question: "Read the discussion:\n\nSpeaker: Working from home has allowed me to be more productive and maintain a better work-life balance. However, sometimes it's challenging to stay connected with the team and maintain clear communication channels.\n\nExplain the speaker's opinion about remote work.",
     correctAnswer: ["flexible", "productive", "balance", "advantage", "benefit", "challenge"],
     exampleAnswer: "The speaker believes remote work offers flexibility and better work-life balance, but also presents challenges with communication and maintaining team cohesion.",
-    videoId: "iSAfmIWjGbM", // Remote work discussion
   },
   {
     id: 115,
     type: "listening",
-    question: "After listening to the presentation, what solution does the speaker propose?",
+    question: "Read the presentation excerpt:\n\nPresenter: To address our current efficiency issues, I propose implementing a new project management software. This will streamline our workflows and improve collaboration.\n\nWhat solution does the speaker propose?",
     options: [
       "Implementing a new software system",
       "Hiring more staff",
@@ -287,10 +275,7 @@ const intermediateQuestions: QuestionType[] = [
       "Increasing the budget",
     ],
     correctAnswer: "Implementing a new software system",
-    videoId: "MK_6bDeCm7M", // Business presentation
   },
-  
-  // Adding more questions to reach total of 15 (for demo purposes - full implementation would have 50)
 ];
 
 // Expert Level Questions
@@ -394,11 +379,11 @@ const expertQuestions: QuestionType[] = [
     exampleAnswer: "Genetic engineering technologies in agriculture present a complex ethical landscape that extends beyond simple utility calculations. At their most promising, these technologies offer solutions to pressing global challenges—drought-resistant crops could mitigate climate change impacts, while nutrient-enhanced varieties might address malnutrition in vulnerable populations. The potential for reduced pesticide use through pest-resistant varieties also presents environmental benefits.\n\nHowever, these technological capabilities raise profound ethical questions. The ecological implications remain incompletely understood; potential outcomes include unintended gene transfers to wild populations, evolution of resistant pests, and potential biodiversity reduction. These risks highlight the tension between short-term benefits and long-term ecosystem stability—a classic intergenerational ethics challenge.\n\nSocioeconomic considerations further complicate the ethical calculus. Proprietary genetically modified organisms (GMOs) have concentrated agricultural power among a few corporations, potentially disadvantaging small-scale farmers through dependence on patented seeds and accompanying agricultural chemicals. This raises justice concerns about who benefits from and who bears the risks of these technologies.\n\nConsumer autonomy and informed consent principles also emerge as central ethical considerations. Labeling debates reflect fundamental disagreements about consumers' right to know how their food is produced versus concerns that such information might be misinterpreted without proper context.\n\nNavigating these ethical complexities requires governance frameworks that balance innovation with precaution, incorporating diverse stakeholder perspectives and recognizing that values beyond economic efficiency—including cultural relationships with food, environmental stewardship, and social justice—legitimately inform policy decisions about agricultural biotechnology.",
   },
 
-  // Listening questions
+  // Converting video questions to text-based listening comprehension
   {
     id: 211,
     type: "listening",
-    question: "After listening to this TED Talk excerpt, what is the speaker's main argument about artificial intelligence?",
+    question: "Read the technology conference speech:\n\nSpeaker: The future of work isn't about humans versus machines. It's about finding ways for artificial intelligence to enhance human capabilities, not replace them. We need to focus on creating collaborative environments where both humans and AI can contribute their unique strengths.\n\nWhat is the speaker's main argument about artificial intelligence?",
     options: [
       "AI will inevitably replace human workers completely",
       "AI should be regulated to prevent dangerous outcomes",
@@ -406,12 +391,11 @@ const expertQuestions: QuestionType[] = [
       "AI development should be paused until ethical frameworks catch up",
     ],
     correctAnswer: "AI and humans should collaborate rather than compete",
-    videoId: "aR5N2Jl8k14", // AI TED talk
   },
   {
     id: 212,
     type: "listening",
-    question: "Based on the lecture, what does the speaker identify as the primary cause of the economic phenomenon described?",
+    question: "Read the economics lecture excerpt:\n\nProfessor: The rapid advancement of computing power and digital innovation has fundamentally transformed traditional business models. This technological revolution is the primary driver of current market disruptions and economic shifts.\n\nWhat does the speaker identify as the primary cause of the economic phenomenon described?",
     options: [
       "Government regulation",
       "Technological innovation",
@@ -419,28 +403,25 @@ const expertQuestions: QuestionType[] = [
       "Global supply chain disruptions",
     ],
     correctAnswer: "Technological innovation",
-    videoId: "PHe0bXAIuk0", // Economic principles lecture
   },
   {
     id: 213,
     type: "listening",
-    question: "After listening to the debate, summarize the main counterargument presented by the second speaker.",
+    question: "Read the academic debate transcript:\n\nFirst Speaker: Our initial findings suggest a strong correlation between the variables.\nSecond Speaker: However, when we examine the longitudinal data and control for confounding variables, this correlation disappears. Three independent studies support this conclusion.\n\nSummarize the main counterargument presented by the second speaker.",
     correctAnswer: ["evidence", "research", "studies", "data", "contrary", "however", "challenge", "alternative"],
-    exampleAnswer: "The second speaker countered the initial argument by pointing out that the available research data actually shows the opposite trend when examined longitudinally. They cited three independent studies demonstrating that when confounding variables are controlled for, the correlation disappears. Their central counterargument was that the apparent relationship results from selection bias rather than causal factors.",
-    videoId: "JTslqcXsFd4", // Academic debate
+    exampleAnswer: "The second speaker countered the initial argument by pointing out that the available research data actually shows the opposite trend when examined longitudinally. They cited three independent studies demonstrating that when confounding variables are controlled for, the correlation disappears.",
   },
   {
     id: 214,
     type: "listening",
-    question: "Listen to the podcast discussion and explain the ethical dilemma presented regarding medical research.",
+    question: "Read the medical ethics discussion:\n\nSpeaker 1: We have this valuable patient data that could lead to breakthroughs in treatment.\nSpeaker 2: But using it without explicit consent raises ethical concerns.\nSpeaker 3: We need to balance potential benefits against individual rights, especially for vulnerable populations.\n\nExplain the ethical dilemma presented regarding medical research.",
     correctAnswer: ["ethical", "dilemma", "consent", "research", "benefits", "risks", "autonomy", "justice", "vulnerable"],
-    exampleAnswer: "The ethical dilemma centers on balancing the potential benefits of medical research against individual autonomy and informed consent. The speakers discuss whether it's justifiable to use anonymized patient data without explicit consent when the research could lead to significant public health improvements. They explore tensions between utilitarian perspectives focused on maximizing benefits and deontological approaches emphasizing respect for individual rights. The discussion highlights particular concerns regarding vulnerable populations who may not understand the implications of their data being used.",
-    videoId: "ULCA4GXTdj4", // Medical ethics discussion
+    exampleAnswer: "The ethical dilemma centers on balancing the potential benefits of medical research against individual autonomy and informed consent. The speakers discuss whether it's justifiable to use anonymized patient data without explicit consent when the research could lead to significant public health improvements.",
   },
   {
     id: 215,
     type: "listening",
-    question: "After listening to the negotiation, what strategy did the successful party use to reach an agreement?",
+    question: "Read the negotiation transcript:\n\nNegotiator 1: Instead of focusing solely on price, let's discuss what each party needs.\nNegotiator 2: Good point. We both want long-term sustainability.\nNegotiator 1: By understanding our shared goals, we can find a solution that benefits everyone.\n\nWhat strategy did the successful party use to reach an agreement?",
     options: [
       "Aggressive demands and ultimatums",
       "Focusing solely on price points",
@@ -448,10 +429,7 @@ const expertQuestions: QuestionType[] = [
       "Using deadline pressure tactics",
     ],
     correctAnswer: "Finding mutual interests and creating value",
-    videoId: "f5I8fhwpX_A", // Negotiation techniques
   },
-  
-  // Adding more questions to reach total of 15 (for demo purposes - full implementation would have 50)
 ];
 
 // Helper function to get questions by level
